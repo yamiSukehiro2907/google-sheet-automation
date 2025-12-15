@@ -76,6 +76,7 @@ async function runETL() {
 
             } catch (err) {
                 await client.query('ROLLBACK');
+                console.log("Error encountered : " + err);
                 errors++;
             }
 
