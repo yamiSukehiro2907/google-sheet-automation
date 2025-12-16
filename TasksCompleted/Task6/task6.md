@@ -12,7 +12,6 @@ Create a real-time sync between Google Sheets and the Cloud Database.
 
 ### 2. The Validator (Apps Script)
 * Checks if `PassengerID` and `Name` are present.
-* Sends a **POST** request to the Cloud API: `http://<GCP_STATIC_IP>:3000/webhook`.
 * Updates row color based on response:
     * 🟢 **Green:** Success ("REGISTERED")
     * 🔴 **Red:** Failure ("FAILED: Error Msg")

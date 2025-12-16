@@ -22,7 +22,7 @@ It solves the challenge of **"messy, static data"** by implementing:
 
 ---
 
-## 🛠 Tech Stack* 
+## 🛠 Tech Stack
 **Cloud Infrastructure:** Google Compute Engine (e2-micro, Ubuntu 22.04)
 
 * **Database:** PostgreSQL 15 (Containerized via Docker)
@@ -75,30 +75,7 @@ node etl/etl.js
 ###5. Start Webhook Server
 ```bash
 node server.js
-
 ```
-
----
-
-## 📂 Project Structure
-```text
-/titanic-data-engineering
-├── 📂 sql
-│   ├── schema.sql         # Database DDL (3NF Design)
-│   ├── seed.sql           # Static Reference Data
-│   ├── queries.sql        # Analytical Queries
-│   └── advanced.sql       # Materialized Views
-├── 📂 etl
-│   └── etl.js             # Main ETL Pipeline Script
-├── 📂 docs                # Task-specific Documentation
-├── analyze.js             # Data Audit Tool
-├── optimize.js            # Index Performance Benchmark
-├── server.js              # Webhook API Server
-├── docker-compose.yml     # Infrastructure Config
-└── Code.gs                # Google Apps Script Source
-
-```
-
 ---
 
 ## 📘 Module Breakdown
@@ -143,8 +120,4 @@ Proving performance at scale.
 2. **Networking:** Static External IP assigned. Firewall rules opened for ports `3000` (API) and `5432` (DB).
 3. **Deployment:** Code pulled via Git and orchestrated via `docker-compose`.
 
-**Production Endpoints:**
-
-* **API Webhook:** `http://<GCP_STATIC_IP>:3000/webhook`
-* **Database:** `jdbc:postgresql://<GCP_STATIC_IP>:5432/titanic`
 
